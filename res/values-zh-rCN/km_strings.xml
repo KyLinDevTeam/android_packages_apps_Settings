@@ -19,4 +19,19 @@
     <!-- KylinMod Settings -->
     <string name="kylin_settings_title">麒麟控</string>
 
+    <!-- Network traffic -->
+    <string name="network_traffic_title">网络流量</string>
+    <string name="show_network_traffic_state">状态栏流量监控</string>
+    <string name="show_network_traffic_unit">单元显示</string>
+    <string name="show_network_traffic_frequency">更新间隔</string>
+    <string name="show_network_traffic_disable">关闭</string>
+    <string name="show_network_traffic_up">仅显示上传速度</string>
+    <string name="show_network_traffic_down">仅显示下载速度</string>
+    <string name="show_network_traffic_all">显示上传和下载速度</string>
+    <string name="show_network_traffic_bit">Bit/s</string>
+    <string name="show_network_traffic_byte">Byte/s</string>
+    <!-- Status Bar Activity Indicators -->
+    <string name="show_activity_indicators_on_status_bar_title">当前网速</string>
+    <string name="show_activity_indicators_on_status_bar_summary">在状态栏显示当前网速</string>
+
 </resources>
