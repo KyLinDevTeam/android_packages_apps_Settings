@@ -18,6 +18,7 @@
 
     <!-- KylinMod Settings -->
     <string name="kylin_settings_title">KylinMod settings</string>
+    <string name="category_others_title">Others</string>
 
     <!-- Network traffic -->
     <string name="network_traffic_title">Network traffic</string>
@@ -59,5 +60,12 @@
     <string name="clock_date_style_normal">Normal</string>
     <string name="clock_date_style_lowercase">Lowercase</string>
     <string name="clock_date_style_uppercase">Uppercase</string>
+
+    <!-- show carrier label  and custom -->
+    <string name="show_status_bar_carrier_title">Status bar carrier</string>
+    <string name="show_status_bar_carrier_summary">Show carrier in status bar</string>
+    <string name="custom_carrier_label_title">Custom carrier label</string>
+    <string name="custom_carrier_label_explain">Please enter a new label. Leave blank to revert to stock label.</string>
+    <string name="custom_carrier_label_notset">Custom label currently not set</string>
 
 </resources>

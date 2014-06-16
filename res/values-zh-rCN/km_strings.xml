@@ -18,6 +18,7 @@
 
     <!-- KylinMod Settings -->
     <string name="kylin_settings_title">麒麟控</string>
+    <string name="category_others_title">其它</string>
 
     <!-- Network traffic -->
     <string name="network_traffic_title">网络流量</string>
@@ -55,5 +56,12 @@
     <string name="clock_date_style_normal">正常</string>
     <string name="clock_date_style_lowercase">小写</string>
     <string name="clock_date_style_uppercase">大写</string>
+
+    <!-- show carrier label and custom -->
+    <string name="show_status_bar_carrier_title">运营商名称</string>
+    <string name="show_status_bar_carrier_summary">在状态栏显示运营商名称</string>
+    <string name="custom_carrier_label_title">自定义运营商名称</string>
+    <string name="custom_carrier_label_explain">请输入新的运营商名称，留空为恢复默认运营商名称。</string>
+    <string name="custom_carrier_label_notset">当前没有设置运营商名称</string>
 
 </resources>
