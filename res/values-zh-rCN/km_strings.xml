@@ -30,8 +30,30 @@
     <string name="show_network_traffic_all">显示上传和下载速度</string>
     <string name="show_network_traffic_bit">Bit/s</string>
     <string name="show_network_traffic_byte">Byte/s</string>
+
     <!-- Status Bar Activity Indicators -->
     <string name="show_activity_indicators_on_status_bar_title">当前网速</string>
     <string name="show_activity_indicators_on_status_bar_summary">在状态栏显示当前网速</string>
+
+    <!-- Clock -->
+    <string name="status_bar_clock_date_title">时钟和日期</string>
+    <string name="status_bar_clock_title">时钟和日期样式</string>
+    <string name="status_bar_am_pm_title">上午/下午样式</string>
+    <string name="clock_location_title">时钟位置</string>
+    <string name="right_clock">右侧</string>
+    <string name="center_clock">中间</string>
+    <string name="dont_show">不显示</string>
+    <string name="clock_date_display">日期</string>
+    <string name="clock_date_style">日期样式</string>
+    <string name="clock_date_format">日期格式</string>
+    <string name="am_pm_clock_normal">正常字体</string>
+    <string name="am_pm_clock_small">小号字体</string>
+    <string name="am_pm_clock_none">不显示</string>
+    <string name="clock_date_display_none">不显示</string>
+    <string name="clock_date_display_small">小号字体</string>
+    <string name="clock_date_display_normal">正常字体</string>
+    <string name="clock_date_style_normal">正常</string>
+    <string name="clock_date_style_lowercase">小写</string>
+    <string name="clock_date_style_uppercase">大写</string>
 
 </resources>
