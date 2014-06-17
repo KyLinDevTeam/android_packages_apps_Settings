@@ -32,8 +32,6 @@ import com.android.settings.SettingsPreferenceFragment;
 
 import java.util.Date;
 
-import org.omnirom.omnigears.interfacesettings.BarsSettings;
-
 public class StatusBarClockStyle extends SettingsPreferenceFragment
         implements OnPreferenceChangeListener {
 
