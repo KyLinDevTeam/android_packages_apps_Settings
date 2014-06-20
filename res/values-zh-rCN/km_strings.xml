@@ -64,4 +64,19 @@
     <string name="custom_carrier_label_explain">请输入新的运营商名称，留空为恢复默认运营商名称。</string>
     <string name="custom_carrier_label_notset">当前没有设置运营商名称</string>
 
+    <!-- Navigation Bar -->
+    <string name="navigation_bar_edit_title">按键与布局</string>
+    <string name="navigation_bar_edit_summary">编辑导航栏按键布局</string>
+    <string name="navigation_bar_height">导航栏高度</string>
+    <string name="navigation_bar_height_48">48dp (默认)</string>
+    <string name="navigation_bar_height_44">44dp</string>
+    <string name="navigation_bar_height_40">40dp</string>
+    <string name="navigation_bar_height_36">36dp</string>
+    <string name="navigation_bar_height_32">32dp</string>
+    <string name="navigation_bar_height_28">28dp</string>
+    <string name="navigation_bar_height_24">24dp</string>
+    <string name="navigation_bar_height_20">20dp</string>
+    <string name="navigation_bar_height_0">0dp</string>
+    <string name="navigation_ring_summary">编辑导航栏快捷方式</string>  
+
 </resources>

@@ -43,6 +43,9 @@ public class KylinNavbar extends SettingsPreferenceFragment implements
 
     private static final String TAG = "KylinNavbar";
 
+    // Custom Navigation Bar Height Key
+    private static final String KEY_NAVIGATION_BAR_HEIGHT = "navigation_bar_height";
+
     private static final String KEY_EXPANDED_DESKTOP = "expanded_desktop";
     private static final String KEY_EXPANDED_DESKTOP_NO_NAVBAR = "expanded_desktop_no_navbar";
     private static final String CATEGORY_EXPANDED_DESKTOP = "expanded_desktop_category";
@@ -53,6 +56,9 @@ public class KylinNavbar extends SettingsPreferenceFragment implements
     private CheckBoxPreference mExpandedDesktopNoNavbarPref;
     private CheckBoxPreference mNavigationBarLeftPref;
 
+    // Custom Navigation Bar Height Preference
+    private ListPreference mNavButtonsHeight;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,6 +67,15 @@ public class KylinNavbar extends SettingsPreferenceFragment implements
         PreferenceScreen prefScreen = getPreferenceScreen();
         PreferenceCategory expandedCategory =
                 (PreferenceCategory) findPreference(CATEGORY_EXPANDED_DESKTOP);
+
+        // Custom Navigation Bar Height
+        mNavButtonsHeight = (ListPreference) findPreference(KEY_NAVIGATION_BAR_HEIGHT);
+        mNavButtonsHeight.setOnPreferenceChangeListener(this);
+
+        int statusNavButtonsHeight = Settings.System.getInt(getContentResolver(),
+                Settings.System.NAVIGATION_BAR_HEIGHT, 48);
+        mNavButtonsHeight.setValue(String.valueOf(statusNavButtonsHeight));
+        mNavButtonsHeight.setSummary(mNavButtonsHeight.getEntry());
 
         // Expanded desktop
         mExpandedDesktopPref = (ListPreference) findPreference(KEY_EXPANDED_DESKTOP);
@@ -106,6 +121,7 @@ public class KylinNavbar extends SettingsPreferenceFragment implements
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
+        ContentResolver resolver = getContentResolver();
         if (preference == mExpandedDesktopPref) {
             int expandedDesktopValue = Integer.valueOf((String) objValue);
             updateExpandedDesktop(expandedDesktopValue);
@@ -114,6 +130,12 @@ public class KylinNavbar extends SettingsPreferenceFragment implements
             boolean value = (Boolean) objValue;
             updateExpandedDesktop(value ? 2 : 0);
             return true;
+        } else if (preference == mNavButtonsHeight) {
+            int index = mNavButtonsHeight.findIndexOfValue((String) objValue);
+            Settings.System.putInt(resolver, Settings.System.NAVIGATION_BAR_HEIGHT, 
+                    Integer.valueOf((String) objValue));
+            mNavButtonsHeight.setSummary(mNavButtonsHeight.getEntries()[index]);
+            return true; 
         }
 
         return false;
