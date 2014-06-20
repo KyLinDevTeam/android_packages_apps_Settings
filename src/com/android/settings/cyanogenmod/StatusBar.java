@@ -23,7 +23,9 @@ import android.content.res.Resources;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.TrafficStats;
+import android.content.res.Resources;
 import android.os.Bundle;
+import android.os.RemoteException;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
@@ -42,6 +44,8 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.Utils;
 
 public class StatusBar extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
+
+    private static final String TAG = "StatusBar";
 
     private static final String STATUS_BAR_BATTERY = "status_bar_battery";
     private static final String STATUS_BAR_SIGNAL = "status_bar_signal";
@@ -193,7 +197,7 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
             Settings.System.putInt(resolver, Settings.System.STATUS_BAR_BATTERY, batteryStyle);
             mStatusBarBattery.setSummary(mStatusBarBattery.getEntries()[index]);
 
-            enableStatusBarBatteryDependents((String)newValue);
+            enableStatusBarBatteryDependents((String) newValue);
         } else if (preference == mStatusBarCarrier) {
             boolean value = (Boolean) newValue;
             Settings.System.putInt(resolver, Settings.System.STATUS_BAR_CARRIER, value ? 1 : 0);
@@ -207,7 +211,7 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
             Settings.System.putInt(resolver, Settings.System.STATUS_BAR_NETWORK_ACTIVITY,
                     value ? 1 : 0);
         } else if (preference == mNetTrafficState) {
-            int intState = Integer.valueOf((String)newValue);
+            int intState = Integer.valueOf((String) newValue);
             mNetTrafficVal = setBit(mNetTrafficVal, MASK_UP, getBit(intState, MASK_UP));
             mNetTrafficVal = setBit(mNetTrafficVal, MASK_DOWN, getBit(intState, MASK_DOWN));
             Settings.System.putInt(resolver, Settings.System.NETWORK_TRAFFIC_STATE, mNetTrafficVal);
@@ -222,12 +226,12 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
             }
         } else if (preference == mNetTrafficUnit) {
             // 1 = Display as Byte/s; default is bit/s
-            mNetTrafficVal = setBit(mNetTrafficVal, MASK_UNIT, ((String)newValue).equals("1"));
+            mNetTrafficVal = setBit(mNetTrafficVal, MASK_UNIT, ((String) newValue).equals("1"));
             Settings.System.putInt(resolver, Settings.System.NETWORK_TRAFFIC_STATE, mNetTrafficVal);
             int index = mNetTrafficUnit.findIndexOfValue((String) newValue);
             mNetTrafficUnit.setSummary(mNetTrafficUnit.getEntries()[index]);
         } else if (preference == mNetTrafficPeriod) {
-            int intState = Integer.valueOf((String)newValue);
+            int intState = Integer.valueOf((String) newValue);
             mNetTrafficVal = setBit(mNetTrafficVal, MASK_PERIOD, false) + (intState << 16);
             Settings.System.putInt(resolver, Settings.System.NETWORK_TRAFFIC_STATE, mNetTrafficVal);
             int index = mNetTrafficPeriod.findIndexOfValue((String) newValue);
