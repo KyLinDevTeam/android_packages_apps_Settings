@@ -50,6 +50,13 @@
         android:icon="@drawable/ic_kylin_lockscreen"
         android:fragment="com.android.settings.cyanogenmod.LockscreenInterface" />
 
+    <!-- Active Display -->
+    <PreferenceScreen
+        android:id="@+id/active_display"
+        android:title="@string/active_display_title"
+        android:icon="@drawable/ic_kylin_active_display"
+        android:fragment="com.android.settings.kylinmod.ActiveDisplaySettings" />
+
     <!-- Navigation -->
     <PreferenceScreen
         android:id="@+id/navigation_bar_settings"
