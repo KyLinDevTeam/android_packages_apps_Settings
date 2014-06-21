@@ -82,8 +82,7 @@
     <!-- Active Display -->
     <string name="active_display_title">主动显示</string>
     <string name="ad_enable_title">启用主动显示</string>
-    <string name="ad_enable_summary_on">主动显示已启用</string>
-    <string name="ad_enable_summary_off">主动显示已禁用</string>
+    <string name="ad_enable_summary">主动在屏幕上显示新通知</string>
     <string name="ad_bypass_title">智能模式</string>
     <string name="ad_bypass_summary">不存在通知且启用锁屏安全保护时，将显示锁屏界面</string>
     <string name="ad_text_title">提醒文本</string>
@@ -98,7 +97,7 @@
     <string name="ad_shake_event_title">晃动重新显示</string>
     <string name="ad_shake_event_summary">通过晃动设备来重新显示通知</string>
     <string name="ad_shake_force_title">默认事件</string>
-    <string name="ad_shake_force_summary">收到通知后，将不会运行活动显示，直到用户晃动设备</string>
+    <string name="ad_shake_force_summary">收到通知后，将不会运行活动显示，直到用户晃动设备。</string>
     <string name="ad_shake_threshold_title">强度</string>
     <string name="ad_shake_threshold_summary">晃动显示通知的强度</string>
     <string name="ad_shake_timeout_title">超时</string>
@@ -110,12 +109,12 @@
     <string name="ad_all_notifications_title">所有通知</string>
     <string name="ad_all_notifications_summary">显示所有通知，包括不间断以及不可清除的通知。</string>
     <string name="ad_hide_low_priority_title">隐藏低优先级</string>
-    <string name="ad_hide_low_priority_summary">隐藏低优先级通知，例如来自Google 即时的通知</string>
+    <string name="ad_hide_low_priority_summary">隐藏低优先级通知，例如来自Google 即时的通知。</string>
     <string name="ad_pocket_mode_title">口袋模式</string>
-    <string name="ad_pocket_mode_summary">仅在你将设备拿出口袋之后显示主动显示通知。</string>
+    <string name="ad_pocket_mode_summary">仅在你将设备拿出口袋之后主动显示通知。</string>
     <string name="ad_redisplay_title">重新显示通知</string>
     <string name="ad_timeout_title">显示超时时间</string>
-    <string name="ad_threshold_title">接近阀值</string>
+    <string name="ad_threshold_title">接近阈值</string>
     <string name="ad_threshold_summary">调整传感器的识别精度</string>
     <string name="ad_brightness_title">通知亮度</string>
     <string name="ad_customizations_title">定制</string>
@@ -155,5 +154,39 @@
     <string name="ad_pocket_mode_off">关闭</string>
     <string name="ad_pocket_mode_notifications">仅限通知</string>
     <string name="ad_pocket_mode_always">始终</string>
+
+    <!-- Lockscreen Notifications -->
+    <string name="general">通用</string>
+    <string name="layout">布局</string>
+    <string name="privacy">隐私</string>
+    <string name="lockscreen_notifications">锁屏通知</string>
+    <string name="lockscreen_notifications_summary">在锁屏界面显示新通知</string>
+    <string name="pocket_mode">口袋模式</string>
+    <string name="pocket_mode_summary">当设备被拿出口袋时，点亮屏幕并显示所有通知。当设备被放回口袋时，关闭屏幕。</string>
+    <string name="show_always">始终显示</string>
+    <string name="show_always_summary">当设备被拿出口袋时，总是点亮屏幕，即使没有新通知。</string>
+    <string name="hide_low_priority">隐藏低优先级</string>
+    <string name="hide_low_priority_summary">隐藏低优先级通知，例如来自Google 即时的通知。</string>
+    <string name="hide_non_clearable">隐藏不可清除</string>
+    <string name="hide_non_clearable_summary">隐藏所有不可清除的通知</string>
+    <string name="dismiss_all">允许忽略所有通知</string>
+    <string name="dismiss_all_summary">允许忽略所有不可清除的通知，它们将在锁屏界面隐藏起来。</string>
+    <string name="expanded_view">扩展通知视图</string>
+    <string name="expanded_view_summary">可用时显示最大化的通知信息</string>
+    <string name="force_expanded_view">强行扩展视图</string>
+    <string name="force_expanded_view_summary">默认显示扩展的通知，你还可以扩大和普通视图之间切换。</string>
+    <string name="wake_on_notification">新通知唤醒</string>
+    <string name="wake_on_notification_summary">收到新通知时唤醒设备</string>
+    <string name="notifications_height">通知数量</string>
+    <string name="notifications_height_summary">更改当前屏幕显示的通知数量</string>
+    <string name="offset_top">顶部偏移</string>
+    <string name="offset_top_summary">距屏幕顶部的偏移比例</string>
+    <string name="privacy_mode">隐私模式</string>
+    <string name="privacy_mode_summary">存在新通知时仅显示程序图标，而不显示来自该通知的详细信息。</string>
+    <string name="excluded_apps_title">不包括所有应用</string>
+    <string name="excluded_apps_summary">排除应用程序将不会显示在锁屏通知中</string>
+
+    <!-- Active Display And Lockscreen Notifications Lock -->
+    <string name="ad_or_ln">%1$s已经启用，请先关闭它。</string>
 
 </resources>
