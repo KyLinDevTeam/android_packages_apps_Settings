@@ -36,10 +36,6 @@
     <string name="show_network_traffic_1500">1500 ms</string>
     <string name="show_network_traffic_2000">2000 ms</string>
 
-    <!-- Status Bar Activity Indicators -->
-    <string name="show_activity_indicators_on_status_bar_title">Activity indicators</string>
-    <string name="show_activity_indicators_on_status_bar_summary">Show indicators in signal bars</string>
-
     <!-- Clock -->
     <string name="status_bar_clock_date_title">Clock and date</string>
     <string name="status_bar_clock_date__summary">Choose you like clock and date style</string>

@@ -55,7 +55,6 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     private static final String NETWORK_TRAFFIC_STATE = "network_traffic_state";
     private static final String NETWORK_TRAFFIC_UNIT = "network_traffic_unit";
     private static final String NETWORK_TRAFFIC_PERIOD = "network_traffic_period";
-    private static final String STATUS_BAR_NETWORK_ACTIVITY = "status_bar_network_activity";
 
     private static final String STATUS_BAR_BATTERY_SHOW_PERCENT = "status_bar_battery_show_percent";
 
@@ -72,7 +71,6 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
     private ListPreference mNetTrafficState;
     private ListPreference mNetTrafficUnit;
     private ListPreference mNetTrafficPeriod;
-    private CheckBoxPreference mStatusBarNetworkActivity;
     private CheckBoxPreference mStatusBarCarrier;
     private PreferenceScreen mCustomStatusBarCarrierLabel;
 
@@ -124,12 +122,6 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
         mStatusBarCmSignal.setValue(String.valueOf(signalStyle));
         mStatusBarCmSignal.setSummary(mStatusBarCmSignal.getEntry());
         mStatusBarCmSignal.setOnPreferenceChangeListener(this);
-
-        mStatusBarNetworkActivity =
-                (CheckBoxPreference) prefSet.findPreference(STATUS_BAR_NETWORK_ACTIVITY);
-        mStatusBarNetworkActivity.setChecked(Settings.System.getInt(resolver,
-                Settings.System.STATUS_BAR_NETWORK_ACTIVITY, 0) == 1);
-        mStatusBarNetworkActivity.setOnPreferenceChangeListener(this);
 
         mNetTrafficState = (ListPreference) prefSet.findPreference(NETWORK_TRAFFIC_STATE);
         mNetTrafficUnit = (ListPreference) prefSet.findPreference(NETWORK_TRAFFIC_UNIT);
@@ -227,10 +219,6 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
             int index = mStatusBarCmSignal.findIndexOfValue((String) newValue);
             Settings.System.putInt(resolver, Settings.System.STATUS_BAR_SIGNAL_TEXT, signalStyle);
             mStatusBarCmSignal.setSummary(mStatusBarCmSignal.getEntries()[index]);
-        } else if (preference == mStatusBarNetworkActivity) {
-            boolean value = (Boolean) newValue;
-            Settings.System.putInt(resolver, Settings.System.STATUS_BAR_NETWORK_ACTIVITY,
-                    value ? 1 : 0);
         } else if (preference == mNetTrafficState) {
             int intState = Integer.valueOf((String) newValue);
             mNetTrafficVal = setBit(mNetTrafficVal, MASK_UP, getBit(intState, MASK_UP));

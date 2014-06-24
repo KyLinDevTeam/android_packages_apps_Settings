@@ -32,10 +32,6 @@
     <string name="show_network_traffic_bit">Bit/s</string>
     <string name="show_network_traffic_byte">Byte/s</string>
 
-    <!-- Status Bar Activity Indicators -->
-    <string name="show_activity_indicators_on_status_bar_title">當前網速</string>
-    <string name="show_activity_indicators_on_status_bar_summary">在狀態欄顯示當前網速</string>
-
     <!-- Clock -->
     <string name="status_bar_clock_date_title">時鐘和日期</string>
     <string name="status_bar_clock_date__summary">選擇你喜歡的時鐘和日期樣式</string>

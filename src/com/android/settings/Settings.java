@@ -1253,6 +1253,7 @@ public class Settings extends PreferenceActivity
     public static class ApnEditorActivity extends Settings { /* empty */ }
     public static class BlacklistSettingsActivity extends Settings { /* empty */ }
     public static class KylinSettingsActivity extends Settings { /* empty */ }
+    public static class SystemSettingsActivity extends Settings { /* empty */ }
     public static class QuickSettingsConfigActivity extends Settings { /* empty */ }
     public static class QuietHoursSettingsActivity extends Settings { /* empty */ }
     public static class ThemeSettingsActivity extends Settings { /* empty */ }
